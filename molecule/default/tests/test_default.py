@@ -14,6 +14,7 @@ def test_cmdline_file(host):
         "console=tty1 "
         "root=UUID=49a6dc8a-761b-418a-bb46-344127dcc1a0 "
         "rootfstype=ext4 "
+        "elevator=deadline "
         "fsck.repair=yes "
         "rootwait"
     ) in f.content_string

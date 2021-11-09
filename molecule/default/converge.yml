@@ -6,6 +6,7 @@
       - console=tty1
       - root=PARTUUID=51821e2e-02
       - rootfstype=ext4
+      - elevator=deadline
       - fsck.repair=yes
       - rootwait
   roles:
