@@ -18,7 +18,10 @@ debug:
 
 .PHONY: lint
 lint:
-	molecule lint
+	ec
+	yamllint --strict --config-file .yamllint .
+	ansible-lint .
+	flake8
 
 .PHONY: converge
 converge:
