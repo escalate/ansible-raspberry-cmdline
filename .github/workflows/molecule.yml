@@ -19,7 +19,7 @@ jobs:
         run: |
           pip install --disable-pip-version-check \
             ansible \
-            ansible-lint==6.13.0 \
+            ansible-lint \
             editorconfig-checker \
             flake8 \
             molecule \
