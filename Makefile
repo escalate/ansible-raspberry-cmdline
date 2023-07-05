@@ -20,7 +20,7 @@ debug:
 lint:
 	ec
 	yamllint --strict --config-file .yamllint .
-	ansible-lint .
+	ansible-lint --profile=production .
 	flake8
 
 .PHONY: converge
