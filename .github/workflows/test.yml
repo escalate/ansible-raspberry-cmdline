@@ -45,7 +45,6 @@ jobs:
             molecule \
             molecule-plugins[docker] \
             pytest-testinfra
-          make version
 
       - name: Run Molecule tests
         run: make test

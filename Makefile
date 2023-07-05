@@ -1,4 +1,5 @@
-SHELL = /bin/bash -eo pipefail
+SHELL = /bin/bash
+.SHELLFLAGS = -e -o pipefail -c
 ANSIBLE_ARGS ?= $(ANSIBLE_OPTIONS)
 
 ifdef ANSIBLE_TAGS
@@ -34,12 +35,3 @@ verify:
 .PHONY: destroy
 destroy:
 	molecule destroy
-
-.PHONY: version
-version:
-	ansible --version
-	ansible-lint --version
-	ec --version
-	flake8 --version
-	molecule --version
-	yamllint --version
