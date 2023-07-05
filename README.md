@@ -1,4 +1,4 @@
-[![Molecule](https://github.com/escalate/ansible-raspberry-cmdline/actions/workflows/molecule.yml/badge.svg?branch=master&event=push)](https://github.com/escalate/ansible-raspberry-cmdline/actions/workflows/molecule.yml)
+[![Molecule](https://github.com/escalate/ansible-raspberry-cmdline/actions/workflows/test.yml/badge.svg?branch=master&event=push)](https://github.com/escalate/ansible-raspberry-cmdline/actions/workflows/test.yml)
 
 # Ansible Role: Raspberry - Cmdline
 
