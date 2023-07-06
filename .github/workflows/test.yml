@@ -1,31 +1,10 @@
 name: Test
 'on':
-  - push
-  - pull_request
+  push:
+    branches:
+      - master
+  pull_request:
 jobs:
-  lint:
-    name: Lint
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@v3
-
-      - name: Set up Python 3.x
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.x'
-
-      - name: Install dependencies
-        run: |
-          pip3 install --disable-pip-version-check \
-            ansible-lint \
-            editorconfig-checker \
-            flake8 \
-            yamllint
-
-      - name: Lint Ansible code
-        run: make lint
-
   molecule:
     name: Molecule
     runs-on: ubuntu-latest
@@ -42,9 +21,19 @@ jobs:
         run: |
           pip3 install --disable-pip-version-check \
             ansible \
+            ansible-lint \
+            editorconfig-checker \
+            flake8 \
             molecule \
             molecule-plugins[docker] \
-            pytest-testinfra
+            pytest-testinfra \
+            yamllint
+
+      - name: Print used versions
+        run: make version
+
+      - name: Lint Ansible code
+        run: make lint
 
       - name: Run Molecule tests
         run: make test
