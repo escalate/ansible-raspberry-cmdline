@@ -1,12 +1,12 @@
-name: Test
+name: Tests
 'on':
   push:
     branches:
       - master
   pull_request:
 jobs:
-  molecule:
-    name: Molecule
+  tests:
+    name: Tests
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
