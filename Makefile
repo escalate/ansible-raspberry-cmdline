@@ -21,8 +21,8 @@ debug:
 lint:
 	ec
 	yamllint --strict --config-file .yamllint .
-	ansible-lint .
-	flake8
+	ansible-lint --force-color .
+	flake8 --show-source .
 
 .PHONY: converge
 converge:
