@@ -151,7 +151,7 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Check for Ansible playbook files
+      - name: Check for Ansible files
         id: check_ansible
         uses: andstor/file-existence-action@v2
         with:
