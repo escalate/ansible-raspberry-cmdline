@@ -1,6 +1,14 @@
 - name: Prepare
   hosts: all
   tasks:
+    - name: Ensure /boot/firmware directory exists
+      ansible.builtin.file:
+        path: /boot/firmware
+        state: directory
+        owner: root
+        group: root
+        mode: "0755"
+
     - name: Create cmdline.txt
       ansible.builtin.copy:
         dest: /boot/firmware/cmdline.txt
