@@ -1,13 +1,13 @@
 - name: Get cmdline.txt content
   ansible.builtin.command:
-    cmd: cat /boot/cmdline.txt
+    cmd: cat /boot/firmware/cmdline.txt
   changed_when: false
   register: cmdline_content
 
 - name: Define Linux kernal command line
   ansible.builtin.template:
     src: cmdline.txt.j2
-    dest: /boot/cmdline.txt
+    dest: /boot/firmware/cmdline.txt
     owner: root
     group: root
     mode: "0755"
