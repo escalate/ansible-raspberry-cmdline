@@ -1,4 +1,4 @@
-# root= parameter is ignored and taken from the Raspberry Pi
+# root= parameter is ignored and taken from the remote file
 cmdline_parameters:
   - console=serial0,115200
   - console=tty1
