@@ -3,6 +3,7 @@
 
 # molecule
 __pycache__/
-pytestdebug.log
+.ansible/
 .cache/
 molecule.xml
+pytestdebug.log
