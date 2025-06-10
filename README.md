@@ -2,7 +2,7 @@
 
 # Ansible Role: Raspberry - Cmdline
 
-An Ansible role that manages the [Linux kernel command line](https://www.raspberrypi.com/documentation/computers/configuration.html#the-kernel-command-line) on Raspberry Pi OS (Debian Bookworm).
+An Ansible role that manages the [Linux kernel command line](https://www.raspberrypi.com/documentation/computers/configuration.html#kernel-command-line-cmdline-txt) on Raspberry Pi OS (Debian Bookworm).
 
 ## Role Variables
 
